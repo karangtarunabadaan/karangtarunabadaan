@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1E88FF">
+  <title>Beranda - Karang Taruna Dusun Badaan</title>
+  <meta name="description" content="Website Karang Taruna - kegiatan, galeri, dan struktur organisasi.">
+
+  <!-- Fonts (Inter + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="appHeader"></div>
+
+<main id="main">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>
+          Bersinergi Bersama Karang Taruna<br>
+          <span class="accent">Sebagai Media Pemersatu Warga</span>
+        </h1>
+        <p id="heroTagline"></p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="kegiatan.html">
+            Lihat Kegiatan
+            <span id="iconHeroArrow" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img
+          src="assets/img/beranda.jpg"
+          alt="Kegiatan Karang Taruna"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Visi &amp; Misi</h2>
+        <p>Arah gerak Karang Taruna sebagai wadah pemuda dan pemersatu warga.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-body">
+            <span class="badge badge-secondary">Visi</span>
+            <h3 style="margin:10px 0 10px; font-size:20px; line-height:1.25;">
+              Pemuda Bersatu, Warga Kompak, Dusun Maju
+            </h3>
+            <p style="margin:0; color:var(--muted);">
+              Karang Taruna merupakan wadah pembinaan dan pengembangan kreatifitas generasi muda yang berkelanjutan untuk menjalin persaudaraan dan rasa kebersamaan menjadi mitra organisasi Lembaga, baik kepemudaan ataupun pemerintah dalam pengembangan kreatifitas. Kemampuan dibidang kesejahteraan Sosial baik untuk masyarakat dilingkungan sekitar ataupun diwilayah lain.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <span class="badge badge-secondary">Misi</span>
+            <h3 style="margin:10px 0 10px; font-size:20px; line-height:1.25;">
+              Gerak Bersama untuk Kegiatan Positif
+            </h3>
+
+            <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.7;">
+              <li>Meningkatkan SDM demi masa depan yang lebih baik melalui bidang masyarakat dan menjalin kerjasama dengan instansi pemerintah ataupun pihak lain, melalui pengembangan usaha bersama.</li>
+              <li>Terwujudnya kesejahteraan sosial yang semakin meningkat bagi warga desa pada umumnya dan khususnya generasi muda yang memungkinkan pelaksanaan fungsi sosialnya sebagai pemuda yang mampu membangun serta mengatasi masalah sosial dilingkungannya.</li>
+              <li>Melestarikan kesenian daerah serta pengembangan minat untuk olahraga.</li>
+              <li>Meningkatkan peran pemuda dan perempuan serta memberikan kesadaran pentingnya perlindungan hukum melalui sosialisasi.</li>
+              <li>Terwujudnya pemuda pemudi yang bertaqwa kepada Tuhan YME, penuh perhatian dan peka terhadap masalah dengan daya tahan fisik dan mental yang kuat, tegas dan teguh pendirian serta mampu berkreasi dan berkarya, jujur, sederhana sebagai acuan dimasyarakat.</li>
+              <li>Turut berpartisipasi dalam upaya peningkatan derajat kesehatan melalui perilaku hidup bersih dan sehat (PHBS) serta melakukan upaya antisipasif dalam rangka menjaga dan melestarikan lingkungan hidup.</li>
+              <li>Sebagai media mengasah skill dan ketrampilan melalui system berdiskusi, dan shareing serta membuka forum beraspirasi yang bertujan untuk menciptakan kebersamaan yang lebih erat.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kegiatan Terbaru</h2>
+        <p>Program dan kegiatan yang telah kami laksanakan</p>
+      </div>
+
+      <div id="kegiatanTerbaruGrid" class="grid grid-3"></div>
+
+      <div style="text-align:center; margin-top:22px;">
+        <a class="btn btn-outline" href="kegiatan.html">
+          Lihat Semua Kegiatan
+          <span id="iconAllArrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <div id="appFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/render.js"></script>
+  
+  <script>
+    document.getElementById('appHeader').innerHTML = renderHeader('home');
+    document.getElementById('appFooter').innerHTML = renderFooter();
+
+    document.getElementById('heroTagline').textContent = SITE.tagline || '';
+
+    document.getElementById('iconHeroArrow').innerHTML = icon('arrow-right','icon icon--sm');
+    document.getElementById('iconAllArrow').innerHTML = icon('arrow-right','icon icon--sm');
+
+    renderKegiatanTerbaru('kegiatanTerbaruGrid', 3);
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

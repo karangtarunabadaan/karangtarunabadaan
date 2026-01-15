@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1E88FF">
+  <title>Kegiatan - Karang Taruna Dusun Badaan</title>
+  <meta name="description" content="Website Karang Taruna - kegiatan, galeri, dan struktur organisasi.">
+
+  <!-- Fonts (Inter + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="appHeader"></div>
+
+<main id="main">
+  <header class="page-header">
+    <div class="container">
+      <h1>Kegiatan</h1>
+      <p>Daftar kegiatan Karang Taruna yang kami laksanakan bersama warga.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:18px;">
+    <div class="container">
+      <div id="kegiatanGrid" class="grid grid-3"></div>
+    </div>
+  </section>
+</main>
+
+  <div id="appFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/render.js"></script>
+  
+  <script>
+    document.getElementById('appHeader').innerHTML = renderHeader('kegiatan');
+    document.getElementById('appFooter').innerHTML = renderFooter();
+    renderKegiatanAll('kegiatanGrid');
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

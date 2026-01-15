@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1E88FF">
+  <title>Galeri - Karang Taruna Dusun Badaan</title>
+  <meta name="description" content="Website Karang Taruna - kegiatan, galeri, dan struktur organisasi.">
+
+  <!-- Fonts (Inter + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="appHeader"></div>
+
+<main id="main">
+  <header class="page-header">
+    <div class="container">
+      <h1>Galeri Foto</h1>
+      <p>Dokumentasi kegiatan dan momen berharga Karang Taruna.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:18px;">
+    <div class="container">
+      <div id="galeriGrid" class="gallery-grid" style="margin-top:26px;"></div>
+
+      <div id="galeriEmpty" style="text-align:center; padding:48px 0; color:var(--muted);" hidden>
+        Tidak ada foto.
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Preview gambar">
+    <button class="lightbox-close" type="button" aria-label="Tutup">
+      <span id="lbCloseIcon"></span>
+    </button>
+    <img src="" alt="">
+  </div>
+</main>
+
+  <div id="appFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/render.js"></script>
+  
+  <script>
+    document.getElementById('appHeader').innerHTML = renderHeader('galeri');
+    document.getElementById('appFooter').innerHTML = renderFooter();
+
+    document.getElementById('lbCloseIcon').innerHTML = icon('x','icon icon--md');
+
+    renderGaleri('galeriGrid');
+
+    if(!window.GALERI || window.GALERI.length === 0){
+      document.getElementById('galeriEmpty').hidden = false;
+    }
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
