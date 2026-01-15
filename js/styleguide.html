@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1E88FF">
+  <title>Style Guide - Karang Taruna Dusun Badaan</title>
+  <meta name="description" content="Website Karang Taruna - kegiatan, galeri, dan struktur organisasi.">
+
+  <!-- Fonts (Inter + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="appHeader"></div>
+
+<main id="main">
+  <header class="page-header">
+    <div class="container">
+      <h1>Mini Style Guide</h1>
+      <p>Referensi warna, tipografi, dan komponen UI. (Untuk memudahkan konsistensi desain.)</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:18px;">
+    <div class="container">
+      <div class="section-title" style="text-align:left; margin-bottom:14px;">
+        <h2>Color Styles</h2>
+        <p>Primary, secondary, text, accent, dan warna pendukung.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card"><div class="card-body">
+          <div style="height:80px; border-radius:12px; background:#1E88FF;"></div>
+          <h3 style="margin:12px 0 4px;">Primary</h3>
+          <p style="margin:0; color:var(--muted); font-size:13px;">#1E88FF • CTA utama, highlight, link aktif</p>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <div style="height:80px; border-radius:12px; background:#EAF4FF; border:1px solid var(--border);"></div>
+          <h3 style="margin:12px 0 4px;">Secondary</h3>
+          <p style="margin:0; color:var(--muted); font-size:13px;">#EAF4FF • Background lembut, chip, section</p>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <div style="height:80px; border-radius:12px; background:#0B1B3A;"></div>
+          <h3 style="margin:12px 0 4px;">Text</h3>
+          <p style="margin:0; color:var(--muted); font-size:13px;">#0B1B3A • Teks utama</p>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <div style="height:80px; border-radius:12px; background:#00B0FF;"></div>
+          <h3 style="margin:12px 0 4px;">Accent</h3>
+          <p style="margin:0; color:var(--muted); font-size:13px;">#00B0FF • Aksen / gradient</p>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <div style="height:80px; border-radius:12px; background:#F5F9FF; border:1px solid var(--border);"></div>
+          <h3 style="margin:12px 0 4px;">Muted BG</h3>
+          <p style="margin:0; color:var(--muted); font-size:13px;">#F5F9FF • Background section/card halus</p>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <div style="height:80px; border-radius:12px; background:rgba(30,136,255,0.15);"></div>
+          <h3 style="margin:12px 0 4px;">Border</h3>
+          <p style="margin:0; color:var(--muted); font-size:13px;">rgba(30,136,255,0.15) • Garis pembatas</p>
+        </div></div>
+      </div>
+
+      <div class="section-title" style="text-align:left; margin-top:34px; margin-bottom:14px;">
+        <h2>Components</h2>
+        <p>Contoh tombol, badge, chip, dan card.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card"><div class="card-body">
+          <h3 style="margin:0 0 12px;">Buttons</h3>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn btn-primary" type="button">Primary</button>
+            <button class="btn btn-outline" type="button">Outline</button>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <h3 style="margin:0 0 12px;">Badges</h3>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <span class="badge badge-secondary">Secondary</span>
+            <span class="badge badge-success">Open</span>
+            <span class="badge badge-danger">Closed</span>
+          </div>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <h3 style="margin:0 0 12px;">Chips</h3>
+          <div class="chips" style="justify-content:flex-start;">
+            <span class="chip is-active">Aktif</span>
+            <span class="chip">Normal</span>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <div id="appFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/render.js"></script>
+  
+  <script>
+    document.getElementById('appHeader').innerHTML = renderHeader('');
+    document.getElementById('appFooter').innerHTML = renderFooter();
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
